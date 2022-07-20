@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+	<title>User Management</title>
+</head>
+<body>
+<h2><strong>Data Management</strong></h2>
+
+<p>Logged in as: {{username}}&nbsp; | &nbsp;{{date}} &nbsp;| &nbsp;IP: {{ip_addr}} &nbsp;|&nbsp; &nbsp;<a href="/logout">Log out</a> &nbsp;| &nbsp;<a href="/docs">Documentation</a>&nbsp; | &nbsp;<a href="/new">Add new entry</a></p>
+
+<table align="left" border="1" cellpadding="1" cellspacing="1" style="width:600px;">
+	<thead>
+		<tr>
+			<th scope="col">ID</th>
+			<th scope="col">Name</th>
+			<th scope="col">Age</th>
+			<th scope="col">E-Mail</th>
+			<th scope="col">Address</th>
+			<th scope="col">Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for row in db_entries %}
+			<tr>
+				<td>{{row[0]}}</td>
+				<td>{{row[1]}}</td>
+				<td>{{row[2]}}</td>
+				<td>{{row[3]}}</td>
+				<td>{{row[4]}}</td>
+				<td>
+					<button type="button" onclick="location.href='/del?id={{row[0]}}'">
+						Delete
+					</button>
+					<button type="button" onclick="location.href='/edit?id={{row[0]}}'">
+						Edit
+					</button>
+				</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</body>
+</html>

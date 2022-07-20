@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+	<title>Entry Editor</title>
+</head>
+<body>
+<h2><strong>Entry Editor</strong></h2>
+
+<form action="/submit" enctype="text/plain" id="data" name="data">
+<table border="1" cellpadding="1" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+			<td><strong>Operation:</strong></td>
+			<td>
+				<select name="_operation" size="1" disabled>
+					<option selected="selected">
+						{{operation}}
+					</option>
+				</select>
+				<!-- Workaround for including operation in the submit URL -->
+				<input type="hidden" name="operation" value="{{operation}}" />
+			</td>
+		</tr>
+		<tr>
+			<td><strong>ID:</strong></td>
+			<td><input type="text" name="id" value="{{id}}" readonly/></td>
+		</tr>
+		<tr>
+			<td>Name:</td>
+			<td><input maxlength="32" name="name" type="text" size="32" value="{{name}}"/></td>
+		</tr>
+		<tr>
+			<td>Age:</td>
+			<td><input maxlength="2" name="age" type="text" size="3" value="{{age}}"/></td>
+		</tr>
+		<tr>
+			<td>E-Mail:</td>
+			<td><input maxlength="32" name="email" type="email" size="32" value="{{email}}"/></td>
+		</tr>
+		<tr>
+			<td>Address:</td>
+			<td><input maxlength="32" name="address" type="text" size="32" value="{{address}}"/></td>
+		</tr>
+	</tbody>
+</table>
+
+<p><input name="submitBtn" type="submit" value="Submit" /></p>
+</form>
+<button type="button" onclick="location.href='/man'">Cancel</button>
+
+<p>&nbsp;</p>
+<p style="line-height:0.1">______________________________________________________________________________</p>
+<p style="line-height:0.1">Written by: br0kenpixel - <em>For demonstration purposes only.</em></p>
+</body>
+</html>

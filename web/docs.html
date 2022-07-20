@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<title>Documentation</title>
+</head>
+<body>
+<h2><strong>Documentation</strong></h2>
+
+<p style="line-height:0.1">Welcome to the documentation page! This page can be access without logging in by simply using /docs in the URL.</p>
+<p style="line-height:0.1">On this page, you&#39;ll learn about this application.</p>
+<p>-- Let&#39;s begin --</p>
+
+<h4>Chapter 1:</h4>
+<p style="line-height:0.1">To use this application you must first acknowledge the details displayed by the warning message shown before accesing any other page</p>
+<p style="line-height:0.1">of this application. This warning is not shown when accesing this (documentation) page. Please go to the root URL to view it.</p>
+<p style="line-height:0.1">After you followed the instructions given by the warning message, you will no longer see it until you restart this application.</p>
+<p style="line-height:0.1">The page which serves the message (<a href="/new_client">/new_client</a>) will no longer be accessible, instead, you will be redirected to the login page.</p>
+<p style="line-height:0.1">Keep in mind that this page is not is not supposed to be accessed by the user. This application should redirect the user to it internally.</p>
+
+<h4>Chapter 2:</h4>
+<p style="line-height:0.1">On the login page, please enter your credentials. These can be defined in the source code of this application. If you entered the</p>
+<p style="line-height:0.1">correct credentials, you&#39;ll be given access to the management page (more about it later). The authentication is done by</p>
+<p style="line-height:0.1">calling the <a href="/auth">/auth</a> URL. Keep in mind that this API is not supposed to be used by the user. It should be called</p>
+<p style="line-height:0.1">by this application itself internally. If the warning message (mentioned in Chapter 1) has not been acknowledged, the authentication</p>
+<p style="line-height:0.1">request will be invalidated even if the login credentials are correct. Same behaviour applies if the user is already authorized/logged in.</p>
+
+<h4>Chapter 3:</h4>
+<p style="line-height:0.1">The user management page (<a href="/man">/man</a>) allows you to see all the people stored in the database and manage their data. Keep in mind that both</p>
+<p style="line-height:0.1">the usernames and passwords are limited to 16 characters in the HTML code.&nbsp;This page can&nbsp;only be accessed after acknowledging the</p>
+<p style="line-height:0.1">warning message (mentioned in Chapter 1) and logging in with valid credentials.</p>
+<p style="line-height:0.1">You can perform the following operations:</p>
+<ul>
+	<li>Add a new entry</li>
+	<li>Remove an entry</li>
+	<li>Edit the person&#39;s information (name, age, e-mail, etc.)</li>
+</ul>
+<p style="line-height:0.1">Please keep in mind that this application does not support user permissions. This means that any user who can log in, will be</p>
+<p style="line-height:0.1">able to perform any of the operations listed above.</p>
+<p style="line-height:0.1">Also, the database is regenerated on every start, so any changes you do will only apply until restart!</p>
+
+<h4>The End.</h4>
+<p style="line-height:0.1">For now, this is all you need to know about this application.</p>
+
+<p style="line-height:0.1">______________________________________________________________________________</p>
+<p style="line-height:0.1">Written by: br0kenpixel - <em>For demonstration purposes only.</em></p>
+</body>
+</html>
